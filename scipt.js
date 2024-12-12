@@ -24,10 +24,27 @@ function createGrid( gridSize ){
             newCell.className = "grid-cell"
             newRow.appendChild(newCell);
 
-            newCell.addEventListener("mouseover", function(e) {
-                newCell.classList.add("grid-hover");
-            })
+            //  This section just adds the simple colour change to
+            //  the cell, rather than randomising it
+            
+            // newCell.addEventListener("mouseover", function(e) {
+            //     newCell.classList.add("grid-hover");
+            // })
+            newCell.addEventListener("mouseover", changeCellColour)
         }
         gridContainer.appendChild(newRow);
     }
+}
+
+function changeCellColour(e) {
+    const targetCell = e.target;
+    let opacity = parseFloat(targetCell.style.opacity);
+    if(opacity){
+        targetCell.style.opacity = opacity + 0.1;
+    } else {
+        targetCell.style.opacity = 0.1;
+    }
+
+    let randomColour = Math.floor(Math.random()*16777215).toString(16);
+    targetCell.style.backgroundColor = "#"+randomColour;
 }

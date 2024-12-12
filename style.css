@@ -1,13 +1,13 @@
 #controlContainer, #contentContainer{
     display:flex;
     justify-content: center;
-    margin:20px;
 }
 #gridContainer{
     display:flex;
     flex-direction:column;
     width:500px;
     height:500px;
+    border:2px solid black;
 }
 .grid-row{
     display:flex;
@@ -16,8 +16,7 @@
 }
 .grid-cell {
     flex:1 1 10px;
-    background-color:teal;
 }
 .grid-hover{
-    background-color:orangered;
+    background-color:black;
 }
