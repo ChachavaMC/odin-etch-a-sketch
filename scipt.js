@@ -6,6 +6,7 @@ gridButton.addEventListener("click", () => {
     if(gridSizeInput > 100) {
         gridSizeInput = 100;
     }
+    gridContainer.replaceChildren();
     createGrid(gridSizeInput);
     gridButton.textContent = "NEW GRID"
 })
