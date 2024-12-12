@@ -1,3 +1,8 @@
+#controlContainer, #contentContainer{
+    display:flex;
+    justify-content: center;
+    margin:20px;
+}
 #gridContainer{
     display:flex;
     flex-direction:column;

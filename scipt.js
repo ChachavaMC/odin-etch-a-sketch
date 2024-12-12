@@ -1,4 +1,15 @@
 const gridContainer = document.querySelector( "#gridContainer" );
+const gridButton = document.querySelector("#gridButton");
+
+gridButton.addEventListener("click", () => {
+    let gridSizeInput = parseInt(prompt("How many squares per side (Max of 100)"));
+    if(gridSizeInput > 100) {
+        gridSizeInput = 100;
+    }
+    createGrid(gridSizeInput);
+    gridButton.textContent = "NEW GRID"
+})
+
 function createGrid( gridSize ){
     //  Create 16 "ROW" divs
     //  Inside each "ROW" div create 16 "COLUMN" divs
@@ -19,5 +30,3 @@ function createGrid( gridSize ){
         gridContainer.appendChild(newRow);
     }
 }
-
-createGrid(10);
