@@ -11,8 +11,13 @@ function createGrid( gridSize ){
             newCell.setAttribute("id", "cell" + i + "_" + j)
             newCell.className = "grid-cell"
             newRow.appendChild(newCell);
+
+            newCell.addEventListener("mouseover", function(e) {
+                newCell.classList.add("grid-hover");
+            })
         }
         gridContainer.appendChild(newRow);
     }
 }
+
 createGrid(16);
