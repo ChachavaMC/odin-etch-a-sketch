@@ -1,9 +1,17 @@
 #gridContainer{
     display:flex;
+    flex-direction:column;
+    width:500px;
+    height:500px;
+}
+.grid-row{
+    display:flex;
+    flex-direction:row;
+    flex: 1 1 10px;
 }
 .grid-cell {
+    flex:1 1 10px;
     background-color:teal;
-    margin:1px;
 }
 .grid-hover{
     background-color:orangered;

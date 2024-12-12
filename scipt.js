@@ -5,7 +5,7 @@ function createGrid( gridSize ){
     for( let i = 1; i < gridSize + 1; i++ ){
         let newRow = document.createElement( 'div' );
         newRow.setAttribute( "id", "row" + i )
-        newRow.className = "gridRow"
+        newRow.className = "grid-row"
         for( let j = 1; j < gridSize + 1; j++ ){
             let newCell = document.createElement( 'div' );
             newCell.setAttribute("id", "cell" + i + "_" + j)
@@ -20,4 +20,4 @@ function createGrid( gridSize ){
     }
 }
 
-createGrid(16);
+createGrid(10);
